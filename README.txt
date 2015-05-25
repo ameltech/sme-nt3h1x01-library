@@ -1,0 +1,1 @@
+Library for Smart Everything NT3H1X01 Near Field Communication chip.
