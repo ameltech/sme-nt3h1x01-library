@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map Servo
+#######################################
+
+#######################################
+# Library (KEYWORD3)
+#######################################
+smeNfcDriver	    KEYWORD3
+smeNfc	            KEYWORD3
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+RecordPosEnu	 KEYWORD1
+NDEFDataStr	 KEYWORD1
+
+
+#######################################
+# Methods and Functions smeNfc (KEYWORD2)
+#######################################
+begin		    KEYWORD2
+storeUrihttp	KEYWORD2
+storeText	    KEYWORD2
+readComponentData	    KEYWORD2
+readUserPage	    KEYWORD2
+writeUserPage	    KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+NFC_PAGE_SIZE	 LITERAL1
