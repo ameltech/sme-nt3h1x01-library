@@ -18,7 +18,7 @@
 
 #include <Wire.h>
 
-#include <smeSensors.h>
+#include <SmeNfc.h>
 #include <Arduino.h>
 
 #define SME_2_1         "SmartEverything"

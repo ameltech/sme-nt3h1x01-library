@@ -11,7 +11,7 @@
 #define NDEF_H_
 
 
-#include "..\..\SmeNfc.h"
+#include "../../SmeNfc.h"
 
 
 bool NT3HwriteRecord(const NDEFDataStr *data);

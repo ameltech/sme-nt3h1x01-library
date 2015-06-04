@@ -8,7 +8,7 @@
 #ifndef RTDURI_H_
 #define RTDURI_H_
 
-#include "..\..\..\SmeNfc.h"
+#include "../../../SmeNfc.h"
 
 typedef enum {
     freeForm,   //0x00     No prepending is done ... the entire URI is contained in the URI Field

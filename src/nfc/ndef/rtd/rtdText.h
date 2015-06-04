@@ -10,7 +10,7 @@
 #define RTDTEXT_H_
 
 #include <stdint-gcc.h>
-#include "..\..\..\SmeNfc.h"
+#include "../../../SmeNfc.h"
 
 #define BIT_STATUS (1<<7)
 #define BIT_RFU	   (1<<6)
