@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map Servo
+# Syntax Coloring Map NFC
 #######################################
 
 #######################################
@@ -16,7 +16,7 @@ NDEFDataStr	 KEYWORD1
 
 
 #######################################
-# Methods and Functions smeNfc (KEYWORD2)
+# Methods and Functions (KEYWORD2)
 #######################################
 begin		    KEYWORD2
 storeUrihttp	KEYWORD2
