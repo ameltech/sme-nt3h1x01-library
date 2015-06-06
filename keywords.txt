@@ -18,10 +18,9 @@ NDEFDataStr	 KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-begin		    KEYWORD2
 storeUrihttp	KEYWORD2
 storeText	    KEYWORD2
-readComponentData	    KEYWORD2
+readManufactoringData	    KEYWORD2
 readUserPage	    KEYWORD2
 writeUserPage	    KEYWORD2
 

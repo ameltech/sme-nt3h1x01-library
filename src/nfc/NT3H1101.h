@@ -30,17 +30,12 @@ class NT3H1101_C
 	private:
 	unsigned int _address;
 public:
-    NT3H1101_C(void): _address(NXPNFC_ADDRESS){}; 
+    NT3H1101_C(void): _address(NXPNFC_ADDRESS){}; 			
 		
     /*
-	* Initialize the I2C bus as master
+	* Read the manufacturing data of the NT3H1101
 	*/
-    void begin(void);	
-		
-    /*
-	* Read the manufacturing data
-	*/
-    bool readComponentData(uint8_t nfcPageBuffer[]);		
+    bool readManufactoringData(uint8_t nfcPageBuffer[]);		
     		
     /*
 	* Read the a page within the space reserved for the user

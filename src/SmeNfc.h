@@ -35,7 +35,6 @@ class SmeNfc {
 public:
     SmeNfc();
     virtual ~SmeNfc();
-    void begin(void);
     
     /*
      * The function write in the NT3H a new URI Rtd on the required position

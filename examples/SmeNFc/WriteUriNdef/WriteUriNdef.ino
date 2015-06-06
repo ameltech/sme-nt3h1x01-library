@@ -29,6 +29,10 @@ byte buffer[NFC_PAGE_SIZE];
 
 // the setup function runs once when you press reset or power the board
 void setup() {
+
+   // Initialize the SmartEverythin as Master
+   Wire.begin();
+	   
   // initialize digital pin 13 as an output.
   pinMode(PIN_LED_RED, OUTPUT);
 
@@ -39,14 +43,10 @@ void setup() {
     buffer[i] = 0;
   }
 
-
-  //initialize NFC Driver
-  smeNfc.begin();
-
   // initialize USB console
   SerialUSB.begin(115200);
 
-  if (smeNfcDriver.readComponentData(buffer)) {
+  if (smeNfcDriver.readManufactoringData(buffer)) {
     smeNfc.storeUrihttp(NDEFFirstPos, WEB);
 
     nfcOk = true;
