@@ -41,28 +41,32 @@ static bool writeBufferRegister(uint8_t slaveAddress, byte regToWrite, const uin
 	return true;
 }
 
-void NT3H1101_C::begin(void){
-    Wire.begin();    
-}
-
-bool NT3H1101_C::readComponentData(uint8_t nfcPageBuffer[]) {
+bool NT3H1101_C::readManufactoringData(uint8_t nfcPageBuffer[]) {
     return readRegisters(_address, MANUFACTORING_DATA_REG, NFC_PAGE_SIZE, nfcPageBuffer);
 }
 
 bool NT3H1101_C::readUserPage(uint8_t userPagePtr, uint8_t nfcPageBuffer[]) {
-	if ((userPagePtr + USER_START_REG) > USER_END_REG) {
+    uint8_t reg = USER_START_REG+userPagePtr;
+
+    // if the requested page is out of the register exit with error
+	if (reg > USER_END_REG) {
 		return false;
 	}
-    return  readRegisters(_address, (userPagePtr + USER_START_REG), NFC_PAGE_SIZE, nfcPageBuffer);
+	
+    return  readRegisters(_address, reg, NFC_PAGE_SIZE, nfcPageBuffer);
+	
 }
 
 bool NT3H1101_C::writeUserPage(uint8_t userPagePtr, const uint8_t nfcPageBuffer[]) {  
 	
-	if ((userPagePtr + USER_START_REG) > USER_END_REG) {
+	
+	uint8_t reg = USER_START_REG+userPagePtr;
+
+	if (reg > USER_END_REG) {
 		return false;
 	}
 	  
-    bool ret = writeBufferRegister(_address, (userPagePtr + USER_START_REG), nfcPageBuffer, NFC_PAGE_SIZE);
+    bool ret = writeBufferRegister(_address, reg, nfcPageBuffer, NFC_PAGE_SIZE);
     if (ret)
         delay(100); // give some time to NC for store the buffer
 

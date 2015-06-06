@@ -21,9 +21,6 @@ SmeNfc::~SmeNfc() {
     // TODO Auto-generated destructor stub
 }
 
-void SmeNfc::begin(void) {
-    smeNfcDriver.begin();
-}
 
 bool SmeNfc::storeUrihttp(RecordPosEnu position, char *http){
 

@@ -27,14 +27,8 @@ static composeRtdPtr composeRtd[] = {composeRtdText,composeRtdUri};
 
 
 static bool NT3HReadUserData(uint8_t page) {
-    uint8_t reg = USER_START_REG+page;
-    // if the requested page is out of the register exit with error
-    if (reg > USER_END_REG) {
-        errNo = NT3HERROR_INVALID_USER_MEMORY_PAGE;
-        return false;
-    }
 
-    bool ret = smeNfcDriver.readUserPage(reg, nfcPageBuffer);
+    bool ret = smeNfcDriver.readUserPage(page, nfcPageBuffer);
 
     if (ret == false) {
         errNo = NT3HERROR_READ_USER_MEMORY_PAGE;
@@ -48,21 +42,8 @@ static bool NT3HReadUserData(uint8_t page) {
 
 static bool NT3HWriteUserData(uint8_t page, const uint8_t* data) {
     bool ret = true;
-    //uint8_t dataSend[NFC_PAGE_SIZE +1]; // data plus register
-    uint8_t reg = USER_START_REG+page;
 
-    // if the requested page is out of the register exit with error
-    if (reg > USER_END_REG) {
-        errNo = NT3HERROR_INVALID_USER_MEMORY_PAGE;
-        ret = false;
-        goto end;
-    }
-
-    /*
-    dataSend[0] = reg; // store the register
-    memcpy(&dataSend[1], data, NFC_PAGE_SIZE);
-    ret = writeTimeout(dataSend, sizeof(dataSend));*/
-    ret = smeNfcDriver.writeUserPage(reg, data);
+    ret = smeNfcDriver.writeUserPage(page, data);
     if (ret == false) {
         errNo = NT3HERROR_WRITE_USER_MEMORY_PAGE;
         goto end;
