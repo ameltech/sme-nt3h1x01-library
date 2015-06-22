@@ -30,10 +30,7 @@ byte buffer[NFC_PAGE_SIZE];
 void setup() {
 
    // Initialize the SmartEverythin as Master
-   Wire.begin();
-	   
-  // initialize digital pin 13 as an output.
-  pinMode(PIN_LED_BLUE, OUTPUT);
+   Wire.begin();	   
 
   // just clear the buffer
   int i = 0;
@@ -64,11 +61,10 @@ void loop() {
     }
     SerialUSB.println();
 
-    digitalWrite(PIN_LED_BLUE, LOW);	// turn the LED On
+    ledBlueLight(LOW);	// turn the LED On
     delay(1000);
 
-    digitalWrite(PIN_LED_BLUE, HIGH);   // turn the LED off
+    ledBlueLight(HIGH);   // turn the LED off
     delay(2000);					// wait for a second
   }
-}
-    
+}    

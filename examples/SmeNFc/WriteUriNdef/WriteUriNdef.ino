@@ -32,9 +32,6 @@ void setup() {
 
    // Initialize the SmartEverythin as Master
    Wire.begin();
-	   
-  // initialize digital pin 13 as an output.
-  pinMode(PIN_LED_RED, OUTPUT);
 
   int i;
 
@@ -68,10 +65,10 @@ void loop() {
     }
     SerialUSB.println();
 
-    digitalWrite(PIN_LED_RED, LOW);	// turn the LED On
+    ledRedLight(LOW);	// turn the LED On
     delay(1000);
 
-    digitalWrite(PIN_LED_RED, HIGH);   // turn the LED off
+    ledRedLight(HIGH);   // turn the LED off
     delay(1000);                       // wait for a second
   }
 }
