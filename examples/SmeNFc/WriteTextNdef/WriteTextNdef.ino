@@ -61,10 +61,10 @@ void loop() {
     }
     SerialUSB.println();
 
-    ledBlueLight(LOW);	// turn the LED On
+    ledBlueLight(LOW);	// turn the LED Off
     delay(1000);
 
-    ledBlueLight(HIGH);   // turn the LED off
-    delay(2000);					// wait for a second
+    ledBlueLight(HIGH);   // turn the LED on
+    delay(2000);		  // wait for a second
   }
-}    
+}
