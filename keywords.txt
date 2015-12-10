@@ -21,6 +21,7 @@ NDEFDataStr	 KEYWORD1
 storeUrihttp	KEYWORD2
 storeText	    KEYWORD2
 readManufactoringData	    KEYWORD2
+readUID	    KEYWORD2
 readUserPage	    KEYWORD2
 writeUserPage	    KEYWORD2
 
