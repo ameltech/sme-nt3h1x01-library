@@ -8,7 +8,7 @@
 
 #define NXPNFC_ADDRESS 85  // 0x4 is the default for every NXP io ho visto 85
 
-#define MANUFACTORING_DATA_REG 0x0 
+#define MANUFACTORING_DATA_REG 0x0
 #define USER_START_REG 0x1
 #define NT3H1101_DEF 1 // just for Arduino debug
 
@@ -25,32 +25,37 @@
 #define SRAM_START_REG 0xF8
 #define SRAM_END_REG   0xFB // just the first 8 bytes
 
-class NT3H1101_C 
+class NT3H1101_C
 {
 	private:
 	unsigned int _address;
 public:
-    NT3H1101_C(void): _address(NXPNFC_ADDRESS){}; 			
-		
+    NT3H1101_C(void): _address(NXPNFC_ADDRESS){};
+
     /*
 	* Read the manufacturing data of the NT3H1101
 	*/
-    bool readManufactoringData(uint8_t nfcPageBuffer[]);		
-    		
+    bool readManufactoringData(uint8_t nfcPageBuffer[]);
+
+    /*
+    * Read the 7-byte serial number (UID) of the NT3H1101
+    */
+    bool readUID(uint8_t nfcPageBuffer[]);
+
     /*
 	* Read the a page within the space reserved for the user
 	*
 	*	userPagePtr = 0 for the first page 0x37 for the last page
 	*/
 	bool readUserPage(uint8_t userPagePtr, uint8_t nfcPageBuffer[]);
-	
+
 	/*
 	* write a page within the space reserved for the user
 	*
 	*	userPagePtr = 0 for the first page 0x37 for the last page
 	*/
     bool writeUserPage(uint8_t userPagePtr, const uint8_t nfcPageBuffer[]);
-    
+
 };
 
 extern NT3H1101_C smeNfcDriver;

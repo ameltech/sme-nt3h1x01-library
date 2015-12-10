@@ -12,6 +12,7 @@
 
 
 #define NFC_PAGE_SIZE 16
+#define UID_SIZE 7
 
 typedef enum {
     NT3HERROR_NO_ERROR,
