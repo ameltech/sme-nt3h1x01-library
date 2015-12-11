@@ -40,7 +40,7 @@ typedef struct {
 } configS;
 
 
-// structure that contains the manufactoring data
+// structure that contains the manufacturing data
 typedef struct {
     uint8_t  slaveAddr;
     uint8_t  serialNumber[6];
