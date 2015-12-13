@@ -8,15 +8,15 @@
 
 #define NXPNFC_ADDRESS 85  // 0x4 is the default for every NXP io ho visto 85
 
-#define MANUFACTORING_DATA_REG 0x0
+#define MANUFACTURING_DATA_REG 0x0
 #define USER_START_REG 0x1
 #define NT3H1101_DEF 1 // just for Arduino debug
 
-#ifdef NT3H1201_DEF             // for th 2K
+#ifdef NT3H1201_DEF             // for the 2K
 #define USER_END_REG   0x77
 #define CONFIG_REG	   0x7A
-#elif  NT3H1101_DEF                     // for th 1K
-#define USER_END_REG   0x38 // just the first 8 bytes for th 1K
+#elif  NT3H1101_DEF                     // for the 1K
+#define USER_END_REG   0x38 // just the first 8 bytes for the 1K
 #define CONFIG_REG	   0x3A
 #else
 #error NO NFC MODEL DEFINITION
@@ -35,7 +35,7 @@ public:
     /*
 	* Read the manufacturing data of the NT3H1101
 	*/
-    bool readManufactoringData(uint8_t nfcPageBuffer[]);
+    bool readManufacturingData(uint8_t nfcPageBuffer[]);
 
     /*
     * Read the 7-byte serial number (UID) of the NT3H1101

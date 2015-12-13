@@ -41,12 +41,12 @@ static bool writeBufferRegister(uint8_t slaveAddress, byte regToWrite, const uin
 	return true;
 }
 
-bool NT3H1101_C::readManufactoringData(uint8_t nfcPageBuffer[]) {
-    return readRegisters(_address, MANUFACTORING_DATA_REG, NFC_PAGE_SIZE, nfcPageBuffer);
+bool NT3H1101_C::readManufacturingData(uint8_t nfcPageBuffer[]) {
+    return readRegisters(_address, MANUFACTURING_DATA_REG, NFC_PAGE_SIZE, nfcPageBuffer);
 }
 
 bool NT3H1101_C::readUID(uint8_t nfcPageBuffer[]) {
-    return readRegisters(_address, MANUFACTORING_DATA_REG, UID_SIZE, nfcPageBuffer);
+    return readRegisters(_address, MANUFACTURING_DATA_REG, UID_SIZE, nfcPageBuffer);
 }
 
 bool NT3H1101_C::readUserPage(uint8_t userPagePtr, uint8_t nfcPageBuffer[]) {
