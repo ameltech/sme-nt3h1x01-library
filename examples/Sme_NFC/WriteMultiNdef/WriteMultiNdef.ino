@@ -6,7 +6,7 @@
     And make in the end the RGB led continuously blink green.
 
     created 27 Apr 2015
-    Authors: Mik (smkk@amel-tech.com), Bill (github@unbiot.com)
+    Authors: Mik (smkk@axelelettronica.it), Bill (github@unbiot.com)
 
     This example is in the public domain
     https://github.com/ameltech

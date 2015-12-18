@@ -1,3 +1,5 @@
+# SmartEverything NXP NT3H1101
+----
 This is a library for the NXP NT3H1101 component.
 The NTAG I²C is the first product of NXP’s NTAG family offering both contactless and contact interfaces. 
 In addition to the passive NFC Forum compliant contactless interface, the IC features an I²C contact interface, 
@@ -13,21 +15,28 @@ be easily adapt and use on every Arduino and Arduino Certified boards.
 
 Written by Mik <smkk@amel-tech.com>.  
 
-Repository Contents
+## Repository Contents
 -------------------
 
 * **/examples** - Example sketches for the library (.ino). Run these from the Arduino IDE. 
 * **/src** - Source files for the library (.cpp, .h).
 * **library.properties** - General library properties for the Arduino package manager.
 
-Documentation
+## Releases
+---
+#### v1.0.0 First Release
+#### v1.1.0 Second Release 18-Dec-2015
+* New Features:<br>
+    Add new function to read the 7-byte serial number (UID)
+
+## Documentation
 --------------
 
 * **[Installing an Arduino Library
 * Guide](http://www.arduino.cc/en/Guide/Libraries#toc3)** - How to install a SmartEverything library on the Arduino IDE using the Library Manager
 
 
-License Information
+## License Information
 -------------------
 
 Copyright (c) Amel Technology. All right reserved.
@@ -45,4 +54,5 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
 

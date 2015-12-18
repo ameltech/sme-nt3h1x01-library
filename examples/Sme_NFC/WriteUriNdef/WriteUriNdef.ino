@@ -6,7 +6,7 @@
     send to the console the 7-byte UID of the NFC NT3H1101 chip
 
     created 27 Apr 2015
-    Authors: Mik (smkk@amel-tech.com), Bill (github@unbiot.com)
+    Authors: Mik (smkk@axelelettronica.it), Bill (github@unbiot.com)
 
     This example is in the public domain
     https://github.com/ameltech
