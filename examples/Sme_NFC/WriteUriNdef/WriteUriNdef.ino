@@ -19,7 +19,7 @@
 #include <SmeNfc.h>
 #include <Arduino.h>
 
-#define WEB             "amel-tech.com"
+#define WEB             "Arrow.com"
 
 bool nfcOk;
 byte buffer[UID_SIZE];
@@ -28,6 +28,7 @@ byte buffer[UID_SIZE];
 // the setup function runs once when you press reset or power the board
 void setup() {
 
+  pinMode(PIN_LED_13, OUTPUT);
   // Initialize the SmartEverything as Master
   Wire.begin();
 
@@ -59,10 +60,10 @@ void loop() {
     }
     SerialUSB.println();
 
-    ledGreenLight(LOW);  // turn the LED Off
+    digitalWrite(PIN_LED_13,LOW);  // turn the LED Off
     delay(1000);
 
-    ledGreenLight(HIGH);  // turn the LED On
+    digitalWrite(PIN_LED_13,HIGH);  // turn the LED On
     delay(1000);
   }
 }
